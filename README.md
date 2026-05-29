@@ -1,158 +1,158 @@
-# Polymarket Bot | Polymarket Trading Bot | Polymarket Copy Trading Bot  
+# Polymarket 机器人 | Polymarket 交易机器人 | Polymarket 跟单机器人
 
-**Languages:** [English](README.md) · [中文](README.zh-CN.md) · [Русский](README.ru.md)
+**语言：** [English](README.en.md) · [中文](README.md) · [Русский](README.ru.md)
 
-> **Automated Polymarket copy trading bot that mirrors active traders in real time**  
-> **Live tested • Real on-chain execution • Swap targets anytime**
+> **实时镜像活跃交易者的 Polymarket 自动跟单机器人**  
+> **实盘验证 • 真实链上执行 • 随时更换跟单目标**
 
-> **Need help or an updated build?**  
-> 📱 **Telegram**: [t.me/dexoryn777](https://t.me/dexoryn777) | 🎮 **Discord**: `dexoryn777`
+> **需要帮助或更新版本？**  
+> 📱 **Telegram**：[t.me/dexoryn777](https://t.me/dexoryn777) | 🎮 **Discord**：`dexoryn777`
 
 ---
 
-## 🎥 Live Profit Videos (Historical — Gabagool22)
+## 🎥 实盘盈利视频（历史记录 — Gabagool22）
 
-These sessions were recorded while **@gabagool22** was actively trading. They show the bot executing real copy trades on-chain—not a simulation.
+这些录像拍摄于 **@gabagool22** 仍活跃交易期间，展示机器人在链上执行真实跟单，而非模拟。
 
-**Wallet (historical target):** `0x6031b6eed1c97e853c6e0f03ad3ce3529351f96d`
+**钱包（历史跟单目标）：** `0x6031b6eed1c97e853c6e0f03ad3ce3529351f96d`
 
-> **Note:** Gabagool22 is no longer a reliable copy target. The videos remain proof that the bot worked in production; you should point `USER_ADDRESSES` at traders who are **active today**. See [Story 3](#story-3--bot-still-running-after-gabagool22-stopped) below.
+> **说明：** Gabagool22 已不再是可靠的跟单对象。视频仍可证明机器人曾在生产环境正常运行；请将 `USER_ADDRESSES` 指向**当前仍活跃**的交易者。见下方 [故事 3](#story-3--bot-still-running-after-gabagool22-stopped)。
 
-### Video 1 — Live Copy Trading Run
+### 视频 1 — 实盘跟单运行
 
 https://github.com/user-attachments/assets/2194ef92-b0f7-40e1-9835-4d2965e85e81
 
-- **+$80 profit in ~15 minutes**
-- Bot ran unattended during this session
-- Real on-chain execution, not simulation
+- **约 15 分钟内 +$80 盈利**
+- 本次会话全程无人值守
+- 真实链上执行，非模拟
 
-### Video 2 — Second run (confirmation)
+### 视频 2 — 第二次运行（验证）
 
 https://github.com/user-attachments/assets/df3a6791-89b5-4230-ae40-fb7130dcadc4
 
-- **Additional +$230 profit in the next ~15 minutes**
-- Same bot, same logic, separate run
-- Fully automated copy trading
+- **随后约 15 分钟再 +$230**
+- 同一机器人、同一逻辑、独立运行
+- 全自动跟单
 
 ---
 
-## 📖 Live Test Stories (Real Usage)
+## 📖 实盘故事（真实使用）
 
-### Story 1 — Unattended session (Gabagool22 era)
+### 故事 1 — 无人值守会话（Gabagool22 时期）
 
-After updating the bot, I ran it to test the new logic and left it running while I went out to play billiards with friends.
+更新机器人逻辑后，我启动测试并出门和朋友打台球，机器人持续运行。
 
-About one hour later, when I returned:
+约一小时后返回：
 
-- ✅ The bot was running normally
-- ✅ It was copy trading accurately
-- ✅ Trades matched the target trader's transactions
-- ✅ The bot had already generated profit
+- ✅ 机器人运行正常
+- ✅ 跟单准确
+- ✅ 成交与目标交易者一致
+- ✅ 已产生盈利
 
-This was a fully unattended live run, not a simulation or backtest.
-
----
-
-### Story 2 — Repeatable performance (video runs)
-
-The two videos above are from **separate live sessions** on different days. Same codebase, same monitoring and execution pipeline—no manual clicking through Polymarket. That repeatability is what we optimize for: stable automation, not a one-off lucky trade.
+这是完全无人值守的实盘运行，不是模拟或回测。
 
 ---
 
-### Story 3 — Bot still running after Gabagool22 stopped
+### 故事 2 — 可重复的表现（视频运行）
+
+上方两段视频来自**不同日期**的两次实盘会话。同一套代码、同一监控与执行流水线——无需在 Polymarket 上手动点击。我们追求的是**稳定自动化**，而非单次运气。
+
+---
+
+### 故事 3 — Gabagool22 停更后机器人仍正常运行
 
 <a id="story-3--bot-still-running-after-gabagool22-stopped"></a>
 
-Gabagool22 eventually **slowed down and stopped being a practical copy target**—fewer trades, different behavior, or simply going inactive. A lot of copy traders hit the same wall: the wallet that worked last month goes quiet, and their bot looks "broken" when the real issue is an **empty signal**, not broken software.
+Gabagool22 最终**交易减少，不再适合作为跟单目标**——成交变少、策略变化或已不再活跃。很多跟单者会遇到同样问题：上个月好用的钱包安静下来，机器人看起来像「坏了」，但真正原因往往是**没有信号**，而不是软件故障。
 
-What we did:
+我们做了什么：
 
-- Kept the **same bot** running—no rewrite, no new product
-- Updated `USER_ADDRESSES` to **other active Polymarket wallets** (use the research scripts under `src/scripts/research/` or your own due diligence)
-- Confirmed the full pipeline still works: trade detection → sizing → order posting → logging
+- **同一套机器人**继续运行——无需重写或换产品
+- 将 `USER_ADDRESSES` 更新为**其他活跃的 Polymarket 钱包**（可使用 `src/scripts/research/` 下的研究脚本，或自行尽调）
+- 确认完整流程仍正常：检测交易 → 计算仓位 → 下单 → 日志记录
 
-What we saw:
+我们观察到：
 
-- ✅ Process stayed up and healthy
-- ✅ New target trades were detected and mirrored correctly
-- ✅ Logs and MongoDB history updated as expected
-- ✅ Failures were isolated to market/order edge cases, not "bot died when Gabagool22 left"
+- ✅ 进程稳定健康
+- ✅ 新目标的交易被正确检测并镜像
+- ✅ 日志与 MongoDB 历史按预期更新
+- ✅ 失败仅出现在个别市场/订单边界情况，而非「Gabagool22 一走机器人就挂了」
 
-#### Perfect copy-trading result — mirroring **securebet**
+#### 完美跟单结果 — 镜像 **securebet**
 
-After switching targets, we copied [**securebet**](https://polymarket.com/@securebet) and captured this side-by-side:
+更换目标后，我们跟单 [**securebet**](https://polymarket.com/@securebet)，并拍下这张对比图：
 
 <p align="center">
-  <img src="Realtradehistory/securebet.jpg" alt="Copy trading PnL: bot wallet vs securebet target — matching chart shape" width="100%"/>
+  <img src="Realtradehistory/securebet.jpg" alt="跟单盈亏：机器人钱包 vs securebet 目标 — 曲线形状一致" width="100%"/>
 </p>
 
-**This is what ideal copy trading looks like.** Your bot wallet (left) and the target trader (right) show the **same PnL chart shape** for the day—the same flat period, dip, and recovery spike at the end. Dollar amounts differ because of your sizing (`COPY_SIZE`, multipliers, and balance), but the **curve tracks the leader**, which means trades are being detected and mirrored in sync—not lagging behind or fighting the strategy.
+**这就是理想跟单应有的样子。** 左侧为你的机器人钱包，右侧为目标交易者，当日 **盈亏曲线形状一致**——相同的横盘、回撤与末尾反弹。美元金额因你的仓位设置（`COPY_SIZE`、倍数与余额）而不同，但**曲线跟随领头钱包**，说明交易被及时检测并同步镜像，而非滞后或偏离策略。
 
-Same session, same markets in the activity/history tabs (e.g. the temperature markets visible in the screenshot). That alignment is the proof traders care about: **follow the wallet, get the same equity curve pattern.**
+同一会话中，活动/历史标签页出现相同市场（如截图中的气温类市场）。交易者最在意的证明是：**跟对钱包，就能得到相同的资金曲线形态。**
 
-**Takeaway for traders:** This bot is built to follow **whoever you configure**, not one celebrity wallet. When a trader stops working for you, **change the address—not the bot.** Past Gabagool22 results do not guarantee future results on any target.
-
----
-
-## ⭐ Why This Bot
-
-### 🎯 Real proof, not just claims
-
-Other Polymarket bots often stop at screenshots. This repo includes **video proof** of live execution plus the stories above—including running correctly **after** the original star trader went inactive.
-
-### 🚀 Architecture & performance
-
-- **Centralized `data/` layout** — logs, cache, and simulation results in one place
-- **Async-first** — built on Python `asyncio` for low-latency monitoring
-- **Smart caching** — fewer redundant API calls
-
-### 💡 Features traders actually use
-
-- **Trade aggregation** — combine small fills into executable size (helps gas and Polymarket minimums)
-- **Tiered multipliers** — size positions by the leader's trade size (`TIERED_MULTIPLIERS` in `.env.example`)
-- **Copy strategies** — `PERCENTAGE`, `FIXED`, or `ADAPTIVE` sizing
-- **Simulation & audit tools** — backtest and validate before going live
-- **Multi-trader support** — copy several wallets at once
-- **1-second polling** — configurable via `FETCH_INTERVAL`
-
-### 📈 Comparison
-
-| Feature | This Bot | Typical alternatives |
-|---------|----------|----------------------|
-| **Live execution proof** | ✅ Videos + real stories | ❌ Claims only |
-| **Survives target going inactive** | ✅ Change `USER_ADDRESSES` | ⚠️ Tied to one influencer |
-| **Trade aggregation** | ✅ | ❌ |
-| **Tiered multipliers** | ✅ | ❌ Fixed multiplier only |
-| **Simulation / audit** | ✅ | ❌ |
-| **Multi-trader** | ✅ | ⚠️ Limited |
+**给交易者的结论：** 本机器人跟单**你配置的任何地址**，而非绑定某个「明星钱包」。当某位交易者不再适合你时，**换地址，不要换机器人。** Gabagool22 的过往表现不保证任何目标未来的结果。
 
 ---
 
-## 🎯 Who This Is For
+## ⭐ 为什么选择本机器人
 
-**Good fit:**
+### 🎯 真实证明，而非空口宣传
 
-- Traders who want **passive exposure** to wallets they trust
-- Users comfortable running **Python 3.10+** and a `.env` file
-- People who understand **on-chain risk**, gas, and that leaders change over time
+许多 Polymarket 机器人只有截图。本仓库提供**实盘视频**与上述故事——包括在明星交易者停更后**仍能正常运行**。
 
-**Not a fit:**
+### 🚀 架构与性能
 
-- Anyone expecting **guaranteed** profits or a forever hands-off money printer
-- Complete beginners who will not monitor logs or rotate targets when activity drops
+- **集中式 `data/` 目录** — 日志、缓存与模拟结果统一管理
+- **异步优先** — 基于 Python `asyncio`，低延迟监控
+- **智能缓存** — 减少重复 API 调用
+
+### 💡 交易者真正会用到的功能
+
+- **交易聚合** — 将多笔小单合并为可执行规模（节省 gas，满足 Polymarket 最低额）
+- **分层倍数** — 按领头者单笔规模调整仓位（见 `.env.example` 中的 `TIERED_MULTIPLIERS`）
+- **跟单策略** — `PERCENTAGE`、`FIXED` 或 `ADAPTIVE` 仓位计算
+- **模拟与审计工具** — 实盘前回测与验证
+- **多交易者支持** — 同时跟单多个钱包
+- **1 秒轮询** — 通过 `FETCH_INTERVAL` 可配置
+
+### 📈 对比
+
+| 功能 | 本机器人 | 常见替代方案 |
+|------|----------|----------------|
+| **实盘执行证明** | ✅ 视频 + 真实故事 | ❌ 仅宣传 |
+| **目标停更后仍可用** | ✅ 更换 `USER_ADDRESSES` | ⚠️ 绑定单一网红钱包 |
+| **交易聚合** | ✅ | ❌ |
+| **分层倍数** | ✅ | ❌ 仅固定倍数 |
+| **模拟 / 审计** | ✅ | ❌ |
+| **多交易者** | ✅ | ⚠️ 有限 |
 
 ---
 
-## Quick Start
+## 🎯 适合谁
 
-### Prerequisites
+**适合：**
+
+- 希望**被动跟随**信任钱包的交易者
+- 能运行 **Python 3.10+** 并配置 `.env` 的用户
+- 理解**链上风险**、gas，以及领头者会随时间变化的人
+
+**不适合：**
+
+- 期望**保证盈利**或永远无需盯盘的「印钞机」心态
+- 完全不查看日志、不在活跃度下降时更换目标的新手
+
+---
+
+## 快速开始
+
+### 环境要求
 
 - **Python 3.10+**
-- **MongoDB** — [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register) free tier is fine
-- **Polygon wallet** — USDC for trading, POL/MATIC for gas
-- **RPC URL** — [Infura](https://infura.io) or [Alchemy](https://www.alchemy.com)
+- **MongoDB** — [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register) 免费套餐即可
+- **Polygon 钱包** — 交易用 USDC，gas 用 POL/MATIC
+- **RPC URL** — [Infura](https://infura.io) 或 [Alchemy](https://www.alchemy.com)
 
-### Installation
+### 安装
 
 ```bash
 git clone https://github.com/dexorynLabs/polymarket-copy-trading-bot-v2.0.git
@@ -165,111 +165,111 @@ python -m src.scripts.setup.system_status
 python -m src.main
 ```
 
-Optional: `pip install -e .` then run `polymarket-bot` (see `pyproject.toml`).
+可选：`pip install -e .` 后运行 `polymarket-bot`（见 `pyproject.toml`）。
 
-**Help:** [@dexoryn777](https://t.me/dexoryn777) on Telegram.
+**帮助：** Telegram [@dexoryn777](https://t.me/dexoryn777)
 
 ---
 
-## Configuration
+## 配置
 
-Copy `.env.example` to `.env` and fill in secrets. The setup wizard writes most fields for you.
+将 `.env.example` 复制为 `.env` 并填写密钥。安装向导会写入大部分字段。
 
-### Essential variables
+### 核心变量
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `USER_ADDRESSES` | Wallets to copy (comma-separated or JSON array) | `'0xABC..., 0xDEF...'` |
-| `PROXY_WALLET` | Your Polygon trading wallet | `'0x123...'` |
-| `PRIVATE_KEY` | Private key (**no** `0x` prefix) | `'abc...'` |
-| `MONGO_URI` | MongoDB connection string | `'mongodb+srv://...'` |
+| 变量 | 说明 | 示例 |
+|------|------|------|
+| `USER_ADDRESSES` | 要跟单的钱包（逗号分隔或 JSON 数组） | `'0xABC..., 0xDEF...'` |
+| `PROXY_WALLET` | 你的 Polygon 交易钱包 | `'0x123...'` |
+| `PRIVATE_KEY` | 私钥（**不要**加 `0x` 前缀） | `'abc...'` |
+| `MONGO_URI` | MongoDB 连接字符串 | `'mongodb+srv://...'` |
 | `RPC_URL` | Polygon RPC | `'https://polygon-mainnet...'` |
-| `USDC_CONTRACT_ADDRESS` | USDC on Polygon (default in example) | `'0x2791...'` |
+| `USDC_CONTRACT_ADDRESS` | Polygon 上 USDC（示例中为默认值） | `'0x2791...'` |
 | `CLOB_HTTP_URL` | Polymarket CLOB API | `'https://clob.polymarket.com'` |
-| `COPY_STRATEGY` | `PERCENTAGE`, `FIXED`, or `ADAPTIVE` | `PERCENTAGE` |
-| `COPY_SIZE` | % or USD depending on strategy | `10.0` |
-| `FETCH_INTERVAL` | Poll interval in seconds (default `1`) | `1` |
-| `PREVIEW_MODE` | `true` = monitor only, no orders | `false` |
-| `TRADE_AGGREGATION_ENABLED` | Batch small trades (default `false`) | `true` |
-| `TRADE_AGGREGATION_WINDOW_SECONDS` | Wait time before batching (default `300`) | `300` |
+| `COPY_STRATEGY` | `PERCENTAGE`、`FIXED` 或 `ADAPTIVE` | `PERCENTAGE` |
+| `COPY_SIZE` | 依策略为 % 或 USD | `10.0` |
+| `FETCH_INTERVAL` | 轮询间隔（秒），默认 `1` | `1` |
+| `PREVIEW_MODE` | `true` = 仅监控不下单 | `false` |
+| `TRADE_AGGREGATION_ENABLED` | 合并小单（默认 `false`） | `true` |
+| `TRADE_AGGREGATION_WINDOW_SECONDS` | 合并等待时间（默认 `300`） | `300` |
 
-For `TIERED_MULTIPLIERS`, safety caps, and legacy `TRADE_MULTIPLIER`, see **`.env.example`**.
+`TIERED_MULTIPLIERS`、安全上限及旧版 `TRADE_MULTIPLIER` 见 **`.env.example`**。
 
-### Find active traders to copy
+### 寻找活跃交易者
 
 ```bash
 python -m src.scripts.research.find_best_traders
 python -m src.scripts.research.scan_best_traders
 ```
 
-Always verify wallet activity and risk before copying.
+跟单前务必自行核实钱包活跃度与风险。
 
 ---
 
-## Safety & Risk Management
+## 安全与风险管理
 
-⚠️ **This bot places real trades with real funds.**
+⚠️ **本机器人使用真实资金进行真实交易。**
 
-- Start small; use `PREVIEW_MODE=true` first
-- **Rotate targets** when a trader goes quiet—Gabagool22 is a lesson, not a permanent setting
-- Copy **multiple** wallets when possible; don't rely on one address
-- Check logs daily; run `python -m src.scripts.setup.system_status` before live runs
-- Past performance (including the videos) **does not** guarantee future results
+- 从小资金开始；先用 `PREVIEW_MODE=true`
+- 交易者不活跃时**更换目标**——Gabagool22 是教训，不是永久配置
+- 尽可能**跟单多个钱包**，勿依赖单一地址
+- 每日查看日志；实盘前运行 `python -m src.scripts.setup.system_status`
+- 过往表现（含视频）**不保证**未来结果
 
-1. Use a dedicated wallet with limited balance  
-2. Never commit `.env` or share `PRIVATE_KEY`  
-3. Know how to stop the bot (`Ctrl+C`)  
-4. Research wallets before adding them to `USER_ADDRESSES`
-
----
-
-## FAQ
-
-**Can I still copy Gabagool22?**  
-You can set any address, but Gabagool22 is **not recommended** anymore—activity dropped. Use research scripts or your own list of **currently active** traders.
-
-**What if my target stops trading?**  
-The bot keeps running; you won't see new copies until you point `USER_ADDRESSES` at active wallets. That's expected—not a bot failure.
-
-**Does this work on all Polymarket markets?**  
-Standard markets are supported; exotic or illiquid cases may fail individually and get logged/retried.
-
-**Is this open source?**  
-Yes. A maintained premium build with extra support is also available via Telegram.
+1. 使用余额有限的专用钱包  
+2. 切勿提交 `.env` 或泄露 `PRIVATE_KEY`  
+3. 知道如何停止机器人（`Ctrl+C`）  
+4. 将钱包加入 `USER_ADDRESSES` 前做好研究  
 
 ---
 
-## Author & Contact
+## 常见问题
 
-**Dexoryn Labs** — Polymarket copy-trading automation
+**还能跟单 Gabagool22 吗？**  
+可以设置任意地址，但 Gabagool22 **已不再推荐**——活跃度下降。请用研究脚本或自建**当前活跃**交易者列表。
 
-- **Telegram**: [@dexoryn777](https://t.me/dexoryn777) (fastest)
-- **Discord**: `dexoryn777`
-- **Twitter**: [@dexoryn](https://x.com/dexoryn)
-- **GitHub**: [@dexorynLabs](https://github.com/dexorynLabs)
-- **WeChat**: scan to add **DexorynWe**
+**如果目标停止交易怎么办？**  
+机器人会继续运行；在将 `USER_ADDRESSES` 指向活跃钱包前不会有新跟单。这是正常现象，不是机器人故障。
+
+**支持所有 Polymarket 市场吗？**  
+支持标准市场；冷门或流动性差的情况可能单笔失败并记录/重试。
+
+**是否开源？**  
+是。另有维护中的高级版本，可通过 Telegram 获取额外支持。
+
+---
+
+## 作者与联系
+
+**Dexoryn Labs** — Polymarket 跟单自动化
+
+- **Telegram**：[@dexoryn777](https://t.me/dexoryn777)（回复最快）
+- **Discord**：`dexoryn777`
+- **Twitter**：[@dexoryn](https://x.com/dexoryn)
+- **GitHub**：[@dexorynLabs](https://github.com/dexorynLabs)
+- **微信**：扫码添加 **DexorynWe**
 
 <p align="center">
-  <img src="wechat.png" alt="WeChat QR code — scan to add DexorynWe as a friend" width="280"/>
+  <img src="wechat.png" alt="微信二维码 — 扫码添加 DexorynWe 为好友" width="280"/>
 </p>
 
 ---
 
-## Contributing
+## 贡献
 
-1. Fork the repo  
+1. Fork 本仓库  
 2. `git checkout -b feature/your-feature`  
-3. Commit and push  
-4. Open a Pull Request  
+3. 提交并推送  
+4. 发起 Pull Request  
 
 ---
 
-## Legal Disclaimer
+## 法律声明
 
-Trading on Polymarket involves **substantial risk of loss**. Dexoryn is not responsible for losses from using this software. You are solely responsible for wallet security, target selection, and capital at risk.
+在 Polymarket 交易存在**重大亏损风险**。Dexoryn 不对使用本软件造成的损失负责。钱包安全、目标选择与资金风险由您自行承担。
 
-**Only trade with funds you can afford to lose.**
+**请仅使用您能承受损失的资金进行交易。**
 
 ---
 
-If this project helps you, consider ⭐ starring the repo or opening issues/PRs. Questions: [@dexoryn777](https://t.me/dexoryn777).
+若本项目对您有帮助，欢迎 ⭐ Star 本仓库或提交 Issue/PR。问题咨询：Telegram [@dexoryn777](https://t.me/dexoryn777)。

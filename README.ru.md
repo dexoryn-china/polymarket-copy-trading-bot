@@ -1,6 +1,6 @@
 # Polymarket Bot | Торговый бот Polymarket | Бот копи-трейдинга Polymarket
 
-**Языки:** [English](README.md) · [中文](README.zh-CN.md) · [Русский](README.ru.md)
+**Языки:** [English](README.en.md) · [中文](README.md) · [Русский](README.ru.md)
 
 > **Автоматический бот копи-трейдинга Polymarket — зеркалит активных трейдеров в реальном времени**  
 > **Проверено в live • Реальное исполнение on-chain • Смена целей в любой момент**
