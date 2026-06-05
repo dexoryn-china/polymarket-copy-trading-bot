@@ -6,7 +6,7 @@
 > **Проверено в live • Реальное исполнение on-chain • Смена целей в любой момент**
 
 > **Нужна помощь или обновлённая сборка?**  
-> 📱 **Telegram**: [t.me/dexoryn777](https://t.me/dexoryn777) | 🎮 **Discord**: `dexoryn777`
+> 📱 **Telegram**: [t.me/dexoryn](https://t.me/dexoryn) | 🎮 **Discord**: `dexoryn777`
 
 ---
 
@@ -167,7 +167,7 @@ python -m src.main
 
 Опционально: `pip install -e .`, затем `polymarket-bot` (см. `pyproject.toml`).
 
-**Помощь:** Telegram [@dexoryn777](https://t.me/dexoryn777)
+**Помощь:** Telegram [@dexoryn](https://t.me/dexoryn)
 
 ---
 
@@ -243,14 +243,16 @@ python -m src.scripts.research.scan_best_traders
 
 **Dexoryn Labs** — автоматизация копи-трейдинга Polymarket
 
-- **Telegram**: [@dexoryn777](https://t.me/dexoryn777) (быстрее всего)
+- **Telegram**: [@dexoryn](https://t.me/dexoryn) (быстрее всего)
 - **Discord**: `dexoryn777`
 - **Twitter**: [@dexoryn](https://x.com/dexoryn)
 - **GitHub**: [@dexorynLabs](https://github.com/dexorynLabs)
 - **WeChat**: отсканируйте, чтобы добавить **DexorynWe**
 
 <p align="center">
-  <img src="wechat.png" alt="QR-код WeChat — добавить DexorynWe в друзья" width="280"/>
+  <img src="dexoryn_tg.jpg" alt="QR-код Telegram — открыть @dexoryn" height="280"/>
+  &nbsp;&nbsp;
+  <img src="dexoryn_wechat.png" alt="QR-код WeChat — добавить DexorynWe в друзья" height="280"/>
 </p>
 
 ---
@@ -272,4 +274,4 @@ python -m src.scripts.research.scan_best_traders
 
 ---
 
-Если проект полезен — поставьте ⭐ Star или откройте issue/PR. Вопросы: Telegram [@dexoryn777](https://t.me/dexoryn777).
+Если проект полезен — поставьте ⭐ Star или откройте issue/PR. Вопросы: Telegram [@dexoryn](https://t.me/dexoryn).

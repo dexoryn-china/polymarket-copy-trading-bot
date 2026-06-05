@@ -6,7 +6,7 @@
 > **Live tested • Real on-chain execution • Swap targets anytime**
 
 > **Need help or an updated build?**  
-> 📱 **Telegram**: [t.me/dexoryn777](https://t.me/dexoryn777) | 🎮 **Discord**: `dexoryn777`
+> 📱 **Telegram**: [t.me/dexoryn](https://t.me/dexoryn) | 🎮 **Discord**: `dexoryn777`
 
 ---
 
@@ -167,7 +167,7 @@ python -m src.main
 
 Optional: `pip install -e .` then run `polymarket-bot` (see `pyproject.toml`).
 
-**Help:** [@dexoryn777](https://t.me/dexoryn777) on Telegram.
+**Help:** [@dexoryn](https://t.me/dexoryn) on Telegram.
 
 ---
 
@@ -243,14 +243,16 @@ Yes. A maintained premium build with extra support is also available via Telegra
 
 **Dexoryn Labs** — Polymarket copy-trading automation
 
-- **Telegram**: [@dexoryn777](https://t.me/dexoryn777) (fastest)
+- **Telegram**: [@dexoryn](https://t.me/dexoryn) (fastest)
 - **Discord**: `dexoryn777`
 - **Twitter**: [@dexoryn](https://x.com/dexoryn)
 - **GitHub**: [@dexorynLabs](https://github.com/dexorynLabs)
 - **WeChat**: scan to add **DexorynWe**
 
 <p align="center">
-  <img src="wechat.png" alt="WeChat QR code — scan to add DexorynWe as a friend" width="280"/>
+  <img src="dexoryn_tg.jpg" alt="Telegram QR code — scan to open @dexoryn" height="280"/>
+  &nbsp;&nbsp;
+  <img src="dexoryn_wechat.png" alt="WeChat QR code — scan to add DexorynWe as a friend" height="280"/>
 </p>
 
 ---
@@ -272,4 +274,4 @@ Trading on Polymarket involves **substantial risk of loss**. Dexoryn is not resp
 
 ---
 
-If this project helps you, consider ⭐ starring the repo or opening issues/PRs. Questions: [@dexoryn777](https://t.me/dexoryn777).
+If this project helps you, consider ⭐ starring the repo or opening issues/PRs. Questions: [@dexoryn](https://t.me/dexoryn).

@@ -61,7 +61,7 @@ project-urls = {
     "Documentation" = "https://github.com/dexorynLabs/polymarket-copy-trading-bot-v2.0#readme",
     "Repository" = "https://github.com/dexorynLabs/polymarket-copy-trading-bot-v2.0",
     "Issues" = "https://github.com/dexorynLabs/polymarket-copy-trading-bot-v2.0/issues",
-    "Support" = "https://t.me/dexoryn777",
+    "Support" = "https://t.me/dexoryn",
     "Twitter" = "https://x.com/dexoryn",
 }
 dependencies = [
