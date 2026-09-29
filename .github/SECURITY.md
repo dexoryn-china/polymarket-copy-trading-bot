@@ -16,7 +16,7 @@ Security fixes are applied to the latest release on the `main` branch.
 Report privately via:
 
 - **Telegram**: [@dexoryn](https://t.me/dexoryn) (preferred)
-- **GitHub**: [Private vulnerability report](https://github.com/dexorynlabs/polymarket-trading-bot-python/security/advisories/new) if you have access
+- **GitHub**: [Private vulnerability report](https://github.com/dexoryn-china/polymarket-copy-trading-bot/security/advisories/new) if you have access
 
 Include steps to reproduce, affected versions, and impact when possible. We aim to acknowledge reports within a few business days.
 

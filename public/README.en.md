@@ -131,8 +131,8 @@ The videos and stories above are **predictions** runs. This build adds a full pl
 ### Install
 
 ```bash
-git clone https://github.com/dexorynlabs/polymarket-trading-bot-python.git
-cd polymarket-trading-bot-python
+git clone https://github.com/dexoryn-china/polymarket-copy-trading-bot.git
+cd polymarket-copy-trading-bot
 
 pip install -r requirements.txt
 

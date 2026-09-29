@@ -11,8 +11,8 @@ Thanks for helping improve this project. Issues and pull requests are welcome.
 ## Development setup
 
 ```bash
-git clone https://github.com/dexorynlabs/polymarket-trading-bot-python.git
-cd polymarket-trading-bot-python
+git clone https://github.com/dexoryn-china/polymarket-copy-trading-bot.git
+cd polymarket-copy-trading-bot
 
 pip install -r requirements.txt
 pip install -r requirements-dev.txt

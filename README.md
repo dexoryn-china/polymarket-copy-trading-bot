@@ -131,8 +131,8 @@ Gabagool22 最终**交易减少，不再适合作为跟单目标**--成交变少
 ### 安装
 
 ```bash
-git clone https://github.com/dexorynlabs/polymarket-trading-bot-python.git
-cd polymarket-trading-bot-python
+git clone https://github.com/dexoryn-china/polymarket-copy-trading-bot.git
+cd polymarket-copy-trading-bot
 
 pip install -r requirements.txt
 
