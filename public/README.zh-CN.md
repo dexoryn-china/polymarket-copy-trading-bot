@@ -1,6 +1,6 @@
 ﻿# Polymarket 机器人 | Polymarket 交易机器人 | Polymarket 跟单机器人
 
-**语言：** [English](public/README.en.md) · [中文](README.md) · [Русский](public/README.ru.md)
+**语言：** [English](../public/README.en.md) · [中文](../README.md) · [Русский](README.ru.md)
 
 > **实时镜像活跃交易者的 Polymarket 自动跟单机器人**  
 > **预测市场 & 永续 • 多钱包 • Web 仪表盘 • 实盘验证 • 真实链上执行**
@@ -83,7 +83,7 @@ Gabagool22 最终**交易减少，不再适合作为跟单目标**--成交变少
 更换目标后，我们跟单 [**securebet**](https://polymarket.com/@securebet)，并拍下这张对比图：
 
 <p align="center">
-  <img src="public/Realtradehistory/securebet.jpg" alt="跟单盈亏：机器人钱包 vs securebet 目标 - 曲线形状一致" width="100%"/>
+  <img src="Realtradehistory/securebet.jpg" alt="跟单盈亏：机器人钱包 vs securebet 目标 - 曲线形状一致" width="100%"/>
 </p>
 
 **这就是理想跟单应有的样子。** 左侧为你的机器人钱包，右侧为目标交易者，当日 **盈亏曲线形状一致**--相同的横盘、回撤与末尾反弹。美元金额因你的仓位设置与余额而不同，但**曲线跟随领头钱包**，说明交易被及时检测并同步镜像，而非滞后或偏离策略。
@@ -229,18 +229,18 @@ UI 重建（可选）：`cd ui && npm install && npm run build` · 见 [`ui/READ
 - **微信**：扫码添加 **DexorynWe**
 
 <p align="center">
-  <img src="public/dexoryn_tg.jpg" alt="Telegram 二维码 - @dexoryn" height="260"/>
+  <img src="../public/dexoryn_tg.jpg" alt="Telegram 二维码 - @dexoryn" height="260"/>
   &nbsp;&nbsp;
-  <img src="public/dexoryn_wechat.png" alt="微信二维码 - DexorynWe" height="260"/>
+  <img src="../public/dexoryn_wechat.png" alt="微信二维码 - DexorynWe" height="260"/>
 </p>
 
 ---
 
 ## 贡献
 
-详见 [CONTRIBUTING.md](.github/CONTRIBUTING.md)。简要：Fork → 分支 → `pytest` → PR。
+详见 [CONTRIBUTING.md](../.github/CONTRIBUTING.md)。简要：Fork → 分支 → `pytest` → PR。
 
-社区：[行为准则](.github/CODE_OF_CONDUCT.md) · [安全](.github/SECURITY.md) · [MIT 许可证](LICENSE)
+社区：[行为准则](../.github/CODE_OF_CONDUCT.md) · [安全](../.github/SECURITY.md) · [MIT 许可证](../LICENSE)
 
 ---
 
