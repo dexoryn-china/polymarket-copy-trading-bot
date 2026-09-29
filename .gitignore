@@ -1,60 +1,45 @@
-# Logs
-logs/
-data/logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Dependency directories
-node_modules/
-
-# Build output
-dist/
-build/
-out/
-
-# TypeScript files
-*.tsbuildinfo
-
-# Environment variables
+# Secrets & local config
+config.yaml
 .env
+.env.*
+!.env.example
+!ui/.env.mock
+*.local
 
-# Temporary files
+# Runtime state (written by the bot)
+state.json
+targets.yaml
+settings.yaml
+perps_session.json
 *.tmp
-*.temp
+history.db
+history.db-*
+logs/
+*.log
 
-# Editor and OS-specific files
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Web UI (app/web/static is the build output of ui/)
+ui/node_modules/
+ui/dist/
+*.tsbuildinfo
+app/web/static/
+
+# Scratch
+.smoke/
+
+# IDE / OS
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-
-# Optional lock files (keep package-lock.json for CI/CD)
-yarn.lock
-pnpm-lock.yaml
-
-# Coverage reports
-coverage/
-
-# Testing
-jest-test-results.json
-.nyc_output/
-.vitest/
-
-# Lint and formatting cache
-.eslintcache
-.prettiercache
-
-.yarn
-
-# Runtime data directories (organized under data/)
-data/
-simulation_results/
-trader_data_cache/
-audit_results/
-strategy_factory_results/
-
-# Legacy directories (for backward compatibility)
-logs/

@@ -1,0 +1,132 @@
+# Polymarket Copy Bot config — copy to config.yaml and fill in.
+# Trading settings changed from the dashboard are saved to settings.yaml,
+# which overrides the same keys below.
+# config.yaml is gitignored.
+
+# Mode: dry_run simulates fills (no orders), real signs & posts orders
+mode: dry_run                     # dry_run | real
+
+# What to copy — one venue at a time. Pick it and press Start in the
+# dashboard; this is only the initial choice (the dashboard's is remembered).
+# With the dashboard disabled (web.enabled: false) copying starts at launch.
+copy:
+  venue: predictions              # predictions | perps
+
+# ── Targets ──────────────────────────────────────────────────────────────
+# Wallets to copy. Used ONLY to create targets.yaml on first run — after that
+# add / edit / disable targets from the dashboard (or edit targets.yaml).
+# Each target has its own sizing, exposure cap and on/off switch.
+#
+# (Legacy single-target configs with `target_wallet:` + `sizing:` still work:
+#  they are converted into one target automatically.)
+targets:
+  - name: whale-1
+    venue: predictions            # prediction markets (CLOB)
+    wallet: "0x..."               # proxy wallet from the trader's Polymarket profile
+    enabled: true
+    copy_closes: true             # mirror the target's SELLs (proportional exits)
+    sizing:
+      mode: fixed                 # fixed | percent_of_target
+      fixed_usd_per_fill: 10.0    # mode=fixed: USD per copy
+      percent_of_target: 5        # mode=percent_of_target: % of target's USD per chunk
+      max_open_usd: 100.0         # cap on this target's open cost basis
+      # Accumulate the target's BUY shares per market until this many, then
+      # copy. Use ~1 for targets trading short-lived markets (btc-updown-5m).
+      min_target_shares_to_copy: 10
+
+  # - name: perp-trader
+  #   venue: perps                # Polymarket Perps (copied when copy.venue is perps)
+  #   wallet: "0x..."             # account address (Perps leaderboard / profile)
+  #   enabled: true
+  #   copy_closes: true           # mirror reductions, closes and flips
+  #   sizing:
+  #     mode: percent_of_target   # percent_of_target | fixed_notional
+  #     percent_of_target: 10     # our size change = target's size change × 10%
+  #     fixed_notional_usd: 50    # mode=fixed_notional: notional per entry / add
+  #     max_open_notional_usd: 500
+  #     leverage: 3               # set per instrument before opening from flat
+
+# ── Risk ─────────────────────────────────────────────────────────────────
+risk:
+  max_open_usd_total: null        # optional cap across ALL predictions targets (null = none)
+
+# ── Prediction-market execution ──────────────────────────────────────────
+execution:
+  order_type: taker               # taker (FAK) | maker (GTC) — entries AND exits
+
+# Order minimum (Polymarket rejects orders below the per-market minimum).
+#   dollar → minimum order VALUE of min_usd; shares = ceil(min_usd / price).
+#   shares → flat min_shares share count, independent of price.
+order_minimum:
+  mode: dollar                    # dollar | shares
+  min_usd: 1.0                    # used when mode=dollar
+  min_shares: 5.0                 # used when mode=shares
+
+maker_settings:                   # only used if order_type=maker
+  rest_timeout_s: 30              # cancel a GTC copy still resting after this (null = never)
+  price_offset_ticks: 0           # 0 = target_price; -1 = one tick below
+
+# Position expiry (drops from headroom tracker)
+position_expiry:
+  buffer_s: 60                    # drop position from tracker at endDate + buffer
+  fallback_ttl_min: 1440          # if Gamma never returned endDate, drop after 24h
+
+# Slippage cap for taker FAK orders (limit = target price × (1 ± bps/10000)).
+# Wider = higher fill rate when price moves between detection and POST.
+slippage:
+  entry_bps_max: 1000             # BUY: up to +10% above the target's fill price
+  exit_bps_max: 1000              # SELL: down to -10% below (omit → uses entry)
+
+# Dedup state
+dedup:
+  seen_cap: 50000                 # LRU size for seen_tx_keys
+
+# Watchdog
+watchdog:
+  max_consecutive_errors: 5       # log ERROR + back off after N in a row
+  silent_timeout_s: 30            # force WS reconnect after N seconds of silence
+
+# ── Perps (Polymarket Perps) ─────────────────────────────────────────────
+# Targets are detected by polling their public portfolio; orders are IOC at
+# mark ± slippage_bps. In real mode the bot creates (and renews weekly) a
+# delegated proxy signer from polymarket.private_key, stored in
+# perps_session.json (gitignored). Fund the Perps account on polymarket.com.
+perps:
+  poll_interval_s: 1.0            # per-target portfolio poll period
+  slippage_bps: 50                # IOC limit = mark × (1 ± 0.5%)
+  margin_mode: isolated           # isolated | cross
+  max_open_notional_total: null   # optional cap across ALL perps targets
+
+# ── Dashboard ────────────────────────────────────────────────────────────
+web:
+  enabled: true
+  host: 127.0.0.1                 # keep on localhost unless you set a token
+  port: 8787
+  token: ""                       # set to require a login token for the dashboard/API
+
+# ── Telegram notifications (optional) ────────────────────────────────────
+telegram:
+  enabled: false
+  bot_token: ""                   # from @BotFather
+  # Single recipient: a string id. Multiple recipients: a YAML list.
+  chat_id: ""
+  # Events to push (omit for defaults: startup, shutdown, copy_start, copy_stop,
+  # copy_success, copy_failure, error). Also available: target_fill, copy_skipped, order_update.
+  # notify_on:
+  #   - copy_success
+  #   - copy_failure
+  #   - error
+
+# Secrets — REQUIRED in real mode, OPTIONAL/empty in dry_run.
+#polymarket:
+#  private_key: "0x..."
+#  wallet_address: "0x..."
+#  api_key: "..."
+#  api_secret: "..."
+#  passphrase: "..."
+#  # How the CLOB validates your order signature:
+#  #   auto = EOA if wallet_address == private_key's address, else GNOSIS_SAFE
+#  #   0    = EOA
+#  #   2    = POLY_GNOSIS_SAFE (pre-2026 proxy/Safe: wallet_address = Safe, key = owner EOA)
+#  #   3    = POLY_1271        (deposit wallet, accounts created after ~May 2026)
+#  signature_type: auto
