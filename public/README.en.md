@@ -218,20 +218,16 @@ Yes. A maintained premium build with extra support is also available via Telegra
 
 ---
 
-## Author & Contact
+## 👤 Author & Contact
 
 **Dexoryn Labs** - Polymarket copy-trading automation
 
-- **Telegram**: [@dexoryn](https://t.me/dexoryn) (fastest)
-- **Discord**: `dexoryn_`
-- **Twitter**: [@dexoryn](https://x.com/dexoryn)
-- **GitHub**: [@dexorynLabs](https://github.com/dexorynLabs)
-- **WeChat**: scan to add **DexorynWe**
+📱 **Telegram:** [@dexoryn](https://t.me/dexoryn) &nbsp; · &nbsp; 🐦 **X:** [@Dexoryn](https://x.com/Dexoryn) &nbsp; · &nbsp; 🎮 **Discord:** `dexoryn_`
 
 <p align="center">
-  <img src="public/dexoryn_tg.jpg" alt="Telegram QR code - @dexoryn" height="260"/>
+  <img src="dexoryn_tg.jpg" alt="Telegram QR code - @dexoryn" height="260"/>
   &nbsp;&nbsp;
-  <img src="public/dexoryn_wechat.png" alt="WeChat QR code - DexorynWe" height="260"/>
+  <img src="dexoryn_wechat.png" alt="WeChat QR code - DexorynWe" height="260"/>
 </p>
 
 ---

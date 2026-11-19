@@ -218,15 +218,11 @@ UI (опционально): `cd ui && npm install && npm run build` · см. [`
 
 ---
 
-## Автор и контакты
+## 👤 Автор и контакты
 
 **Dexoryn Labs** - автоматизация копи-трейдинга Polymarket
 
-- **Telegram**: [@dexoryn](https://t.me/dexoryn) (быстрее всего)
-- **Discord**: `dexoryn_`
-- **Twitter**: [@dexoryn](https://x.com/dexoryn)
-- **GitHub**: [@dexorynLabs](https://github.com/dexorynLabs)
-- **WeChat**: отсканируйте **DexorynWe**
+📱 **Telegram:** [@dexoryn](https://t.me/dexoryn) &nbsp; · &nbsp; 🐦 **X:** [@Dexoryn](https://x.com/Dexoryn) &nbsp; · &nbsp; 🎮 **Discord:** `dexoryn_`
 
 <p align="center">
   <img src="dexoryn_tg.jpg" alt="QR Telegram - @dexoryn" height="260"/>

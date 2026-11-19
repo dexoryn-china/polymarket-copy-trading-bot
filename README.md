@@ -218,15 +218,11 @@ UI 重建（可选）：`cd ui && npm install && npm run build` · 见 [`ui/READ
 
 ---
 
-## 作者与联系
+## 👤 作者与联系
 
 **Dexoryn Labs** - Polymarket 跟单自动化
 
-- **Telegram**：[@dexoryn](https://t.me/dexoryn)（回复最快）
-- **Discord**：`dexoryn_`
-- **Twitter**：[@dexoryn](https://x.com/dexoryn)
-- **GitHub**：[@dexorynLabs](https://github.com/dexorynLabs)
-- **微信**：扫码添加 **DexorynWe**
+📱 **Telegram：** [@dexoryn](https://t.me/dexoryn) &nbsp; · &nbsp; 🐦 **X：** [@Dexoryn](https://x.com/Dexoryn) &nbsp; · &nbsp; 🎮 **Discord：** `dexoryn_`
 
 <p align="center">
   <img src="public/dexoryn_tg.jpg" alt="Telegram 二维码 - @dexoryn" height="260"/>
