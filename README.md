@@ -20,7 +20,7 @@
 
 ### 视频 1 - 实盘跟单运行
 
-https://github.com/user-attachments/assets/2194ef92-b0f7-40e1-9835-4d2965e85e81
+https://github.com/user-attachments/assets/e62d908d-4dbd-4c7f-93a2-20879baed8da
 
 - **约 15 分钟内 +$80 盈利**
 - 本次会话全程无人值守
@@ -28,7 +28,7 @@ https://github.com/user-attachments/assets/2194ef92-b0f7-40e1-9835-4d2965e85e81
 
 ### 视频 2 - 第二次运行（验证）
 
-https://github.com/user-attachments/assets/df3a6791-89b5-4230-ae40-fb7130dcadc4
+https://github.com/user-attachments/assets/cb560ca9-343d-4d7d-9730-818636fdde73
 
 - **随后约 15 分钟再 +$230**
 - 同一机器人、同一逻辑、独立运行
